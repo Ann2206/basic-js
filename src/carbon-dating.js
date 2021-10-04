@@ -1,5 +1,3 @@
-import { NotImplementedError } from '../extensions/index.js';
-
 const CustomError = require("../extensions/custom-error");
 
 const MODERN_ACTIVITY= 15; 
@@ -17,7 +15,3 @@ module.exports = function dateSample( sampleActivity ) {
   let t = Math.log(chs)/k;
   return t;
 };
-export default function dateSample(/* sampleActivity */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
-}
