@@ -14,6 +14,26 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function createDreamTeam(/* members */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+  const CustomError = require("../extensions/custom-error");
+
+module.exports = function createDreamTeam( members ) {
+  console.log(members)
+  members.sort();
+  console.log(members)
+  let arr = [];
+  for (let i=0;i<members.length;i++){
+    if (typeof members[i] == 'string'){
+      members[i] = members[i].toUpperCase();
+      arr.push(members[i]);
+    }
+  }
+  for (let i=0;i<arr.length;i++){
+    arr[i] = (arr[i])[0];
+  }
+  str = arr.join('');
+  console.log(str);
+  return str;
+};
+createDreamTeam(['Matt', 'Ann', 'Dmitry', 'Max'])
+createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null])
 }
